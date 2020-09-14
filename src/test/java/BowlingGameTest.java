@@ -13,7 +13,8 @@ public class BowlingGameTest {
     @Test
     void should_return_300_when_all_frames_are_strike(){
         BowlingGame bowlingScore = new BowlingGame();
-        int result = bowlingScore.calculate("10,X,10,X,10,X,10,X,10,X,10,X,10,X,10,X,10,X,10,10,10");
+        int result = bowlingScore.calculate("X, ,X, ,X, ,X, ,X, ,X, ,X, ,X, ,X, ,X,10,10");
         assertEquals(300,result);
     }
+
 }

@@ -7,8 +7,9 @@ public class BowlingGame {
 
     public int calculate(String scoring) {
 
+        scoring = scoring.replaceAll("X", "10");
         List<Integer> scores = Stream.of(scoring.split(","))
-                .filter(n -> !n.equals("X"))
+                .filter(n -> !n.equals(" "))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         int allPoints = 0;
