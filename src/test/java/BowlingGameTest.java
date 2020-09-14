@@ -17,4 +17,10 @@ public class BowlingGameTest {
         assertEquals(300,result);
     }
 
+    @Test
+    void should_return_right_bowling_scoring(){
+        BowlingGame bowlingScore = new BowlingGame();
+        int result = bowlingScore.calculate("9,/,X, ,8,1,X, ,X, ,7,/,5,4,X, ,X, ,X,8,0");
+        assertEquals(195,result);
+    }
 }
