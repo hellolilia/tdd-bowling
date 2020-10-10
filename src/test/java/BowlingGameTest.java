@@ -24,4 +24,11 @@ public class BowlingGameTest {
         int result = bowlingScore.calculate("9,/,X, ,8,1,X, ,X, ,7,/,5,4,X, ,X, ,X,8,0");
         assertEquals(195,result);
     }
+
+    @Test
+    void should_return_right_bowling_scoring_when_last_frame_is_spare(){
+        BowlingGame bowlingScore = new BowlingGame();
+        int result = bowlingScore.calculate("7,0,8,/,9,/,X, ,8,0,X, ,X, ,X, ,8,/,9,/,8");
+        assertEquals(187,result);
+    }
 }
