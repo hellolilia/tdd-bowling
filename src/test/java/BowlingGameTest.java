@@ -38,4 +38,11 @@ public class BowlingGameTest {
         int result = bowlingScore.calculate("3,/,7,0,5,2,5,3,1,5,7,0,8,0,9,0,6,0,6,1,0");
         assertEquals(82,result);
     }
+
+    @Test
+    void should_return_right_bowling_scoring_when_no_spare_or_strike(){
+        BowlingGame bowlingScore = new BowlingGame();
+        int result = bowlingScore.calculate("4,2,7,0,5,3,5,3,1,5,7,1,5,2,9,0,8,0,2,3,0");
+        assertEquals(72,result);
+    }
 }
